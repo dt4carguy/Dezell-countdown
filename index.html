@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lan="en">
+  <head>
+    <title>Countdown to Dezell</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #CCCCCC;
+      font-family: orbitron, san-serif;
+    }
+    
+    h1 {
+      background-color: #801336;
+      color: white;
+      font-size: 60px;
+      font-family: bangers, cursive;
+      margin: 0;
+      text-align: center;
+    }
+    
+    .clock {
+      text-align: center;
+    }
+    p {
+      border: maroon solid 3px;
+      box-shadow: 5px 5px maroon;
+      color: maroon;
+      display: inline-block;
+      font-size: 60px;
+    }
+    
+    img {
+      border-radius: 100%;
+      display: inline-block;
+          }
+    
+    ul {
+      display: inline-block;
+      font-size: 30px;
+      line-height: 100px;
+    }
+    #attributes {
+      display: flex;
+      justify-content: space-between;
+    }
+      
+    </style>
+  </head>
+  
+  <body>
+    <h1>Countdown to Dezell coming Home for Winter Break</h1>
+    <div class="clock">
+    <p id="demo"></p>
+    </div>
+    <div id="attributes">
+    <img src="https://eastscroll.com/wp-content/uploads/2018/05/DSC_0139-900x600.jpg" alt="Dezell-img1">
+    
+      <ul>
+        <li>Enjoys staring off in the middle-distance</li>
+        <li>Master of all that is Meme and Puns</li>
+        <li>Shares Firestorm alter-ego with a local professor</li>
+        <li>Will be welcomed with joy upon his return to the great Midwest</li>
+      </ul>
+    </div>
+    
+    
+    <script>
+      //Set future date for countdown//
+      var countDownDate = new Date("Dec 21, 2019 10:00:00").getTime();
+      // Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + " days " + hours + " hours "
+  + minutes + " mins " + seconds + " secs ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "DEZELL'S HOME";
+  }
+}, 1000);
+    </script>
+  </body>
+</html>
